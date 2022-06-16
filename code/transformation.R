@@ -1,17 +1,11 @@
-transformation <- function(df) {
-  require(tidyverse)
-  require(broom)
-  require(ggpubr)
-  require(qmap)
-  require(tsibble)
-
+transformation <- function() {
   # estimate parameters of cdf matching 
   l_results <- list()
   l_fit <- list()
   df <- read_csv("data/measurements_with_mnrs.csv")
   
   for(id in unique(df$ID)) {
-    require(dpseg)
+
     # select and prepare data per sensor
     data_id <- df %>%
       dplyr::filter(ID == id) %>%
@@ -54,5 +48,7 @@ transformation <- function(df) {
   df_results <- l_results %>% 
     reduce(full_join) %>%
     distinct()
+  saveRDS(l_fit, "data/list_of_plr_functions.RData")
+  saveRDS(l_results, "data/list_of_results.RData")
   write_csv(df_results, "data/measurements_transformed.csv")
 }

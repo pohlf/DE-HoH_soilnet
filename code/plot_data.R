@@ -1,10 +1,5 @@
 plot_data <- function(blue) {
-  require(ggpubr)
-  require(cowplot)
-  require(tidyverse)
-  require(ggridges)
-  require(tsibble)
-  
+
   df <- read_csv("data/measurements_with_mnrs.csv") 
   
   # 1. MISSING VALUE PLOT 

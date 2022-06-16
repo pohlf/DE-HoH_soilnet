@@ -1,14 +1,8 @@
 run_low_sample_size_test <- function() {
-  require(tidyverse)
-  require(arrangements)
-  require(future.apply)
-  plan(multisession)
   
   df <- read_csv("data/measurements_transformed.csv")
   
   bias_function <- function(depth, df, k){
-    require(tidyverse)
-    require(arrangements)
     
     d <- depth
     ID_list <- df %>%

@@ -68,4 +68,16 @@ ggsave("gof_vs_stability.png", dpi = 300, width = 15, height = 8, unit = "cm")
 plot_gof_low_sample(blue_palette, grey_palette)
 ggsave("gof_avg_ecdf.png", dpi = 300, width = 15, height = 9, unit = "cm")
 
-# FIG.6
+# FIG.6 + VALUES FOR TAB.1
+plot_ts_results()
+ggsave("ts_swc.png", dpi = 300, width = 18, height = 10, unit = "cm", bg = "white")
+
+# APPENDIX A
+# available upon request from Floris Herrmanns floris.hermanns@ufz.de
+
+# APPENDIX B
+cdf_matching_poly_vs_plr()
+ggsave("cdf_poly_vs_plr.png", dpi = 300, width = 15, height = 10, unit = "cm")
+
+# APPENDIX C 
+run_transformation_test_training()

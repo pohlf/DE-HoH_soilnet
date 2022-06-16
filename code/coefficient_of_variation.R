@@ -1,7 +1,5 @@
 coefficient_of_variation <- function(df) {
-  require(tidyverse)
-  #set.seed(497204)
-  
+
   # 1. RANDOMLY SELECT DAYS WITH MAXIMUM AMOUNT OF SENSORS PER LAYER
   df_selected <- df %>%
     dplyr::select(Layer, n, Date, Sensors) %>%

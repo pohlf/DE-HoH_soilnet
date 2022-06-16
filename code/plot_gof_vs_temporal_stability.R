@@ -1,5 +1,5 @@
-plot_gof_vs_temporal_stability <- function(df, my_blue, my_grey) {
-  require(tidyverse)
+plot_gof_vs_temporal_stability <- function(my_blue, my_grey) {
+  df <- read_csv("data/measurements_transformed.csv")
   df_gof <- df %>%
     #dplyr::filter(Layer %in% c("10cm", "50cm")) %>%
     dplyr::filter(n >= n_threshold) %>%

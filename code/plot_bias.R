@@ -1,9 +1,9 @@
-plot_bias <- function(df, my_blue, my_grey) {
+plot_bias <- function(my_blue, my_grey) {
   
+  df <- read_csv("data/measurements_transformed.csv")
   df_plot <- df %>%
     dplyr::filter(Layer %in% c("10cm", "50cm")) %>%
     mutate(mean_t = if_else(n < n_threshold, NA_real_, mean_arithmetic))
-  
   
   # A
   a <- df_plot %>%
