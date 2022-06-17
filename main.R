@@ -17,8 +17,6 @@ sapply(list.files("code", full.names = T), source)
 
 # 0. read data
 # data can be downloaded from https://www.ufz.de/record/dmp/archive/12770/de/
-# correct this to data management portal as soon as uploaded: 
-
 df <- read_csv("/home/fpohl/Nextcloud/Cloud/Git/de-hoh_soilnet/data/de-hoh_soil_moisture_1D_04_2014-04_2021.csv") %>%
   #remove coordx+y cols
   dplyr::select(-c(coord_x,coord_y)) %>%
