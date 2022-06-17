@@ -44,7 +44,8 @@ cdf_matching_poly_vs_plr <- function() {
                          size = c(3,1,1,1),
                          linetype = c("blank", rep("solid", 3)),
                          shape = c(16, NA, NA, NA)))) + 
-    theme(legend.position = "bottom") +
+    theme(legend.position = "bottom",
+          panel.grid.major.x = element_blank()) +
     facet_wrap(~sensor, scales = "free")
 
 }

@@ -11,7 +11,8 @@ library(dpseg)
 library(ggridges)
 plan(multisession)
 
-set.seed(123456)
+set.seed(123456)                         shape = c(16, NA, NA, NA)))) + 
+  theme(legend.position = "bottom") +
 
 sapply(list.files("code", full.names = T), source)
 
