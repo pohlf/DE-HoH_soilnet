@@ -1,92 +1,50 @@
-# DE-HoH_soilnet
 
+# Information about packages and versions
 
-
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://git.ufz.de/pohlf/de-hoh_soilnet.git
-git branch -M main
-git push -uf origin main
+``` r
+sessionInfo()
 ```
 
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://git.ufz.de/pohlf/de-hoh_soilnet/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+    ## R version 4.2.0 (2022-04-22)
+    ## Platform: x86_64-pc-linux-gnu (64-bit)
+    ## Running under: Linux Mint 20.2
+    ## 
+    ## Matrix products: default
+    ## BLAS:   /usr/lib/x86_64-linux-gnu/blas/libblas.so.3.9.0
+    ## LAPACK: /usr/lib/x86_64-linux-gnu/lapack/liblapack.so.3.9.0
+    ## 
+    ## locale:
+    ##  [1] LC_CTYPE=de_DE.UTF-8       LC_NUMERIC=C              
+    ##  [3] LC_TIME=de_DE.UTF-8        LC_COLLATE=de_DE.UTF-8    
+    ##  [5] LC_MONETARY=de_DE.UTF-8    LC_MESSAGES=de_DE.UTF-8   
+    ##  [7] LC_PAPER=de_DE.UTF-8       LC_NAME=C                 
+    ##  [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+    ## [11] LC_MEASUREMENT=de_DE.UTF-8 LC_IDENTIFICATION=C       
+    ## 
+    ## attached base packages:
+    ## [1] stats     graphics  grDevices utils     datasets  methods   base     
+    ## 
+    ## other attached packages:
+    ##  [1] ggridges_0.5.3     dpseg_0.1.1        future.apply_1.9.0 future_1.26.1     
+    ##  [5] arrangements_1.1.9 tsibble_1.1.1      broom_0.8.0        cowplot_1.1.1     
+    ##  [9] ggpubr_0.4.0       lubridate_1.8.0    forcats_0.5.1      stringr_1.4.0     
+    ## [13] dplyr_1.0.9        purrr_0.3.4        readr_2.1.2        tidyr_1.2.0       
+    ## [17] tibble_3.1.7       ggplot2_3.3.6      tidyverse_1.3.1   
+    ## 
+    ## loaded via a namespace (and not attached):
+    ##  [1] httr_1.4.3        jsonlite_1.8.0    carData_3.0-5     modelr_0.1.8     
+    ##  [5] assertthat_0.2.1  cellranger_1.1.0  yaml_2.3.5        globals_0.15.0   
+    ##  [9] pillar_1.7.0      backports_1.4.1   glue_1.6.2        digest_0.6.29    
+    ## [13] ggsignif_0.6.3    rvest_1.0.2       colorspace_2.0-3  htmltools_0.5.2  
+    ## [17] plyr_1.8.7        pkgconfig_2.0.3   listenv_0.8.0     haven_2.5.0      
+    ## [21] scales_1.2.0      tzdb_0.3.0        gmp_0.6-5         generics_0.1.2   
+    ## [25] car_3.1-0         ellipsis_0.3.2    withr_2.5.0       cli_3.3.0        
+    ## [29] magrittr_2.0.3    crayon_1.5.1      readxl_1.4.0      evaluate_0.15    
+    ## [33] fs_1.5.2          fansi_1.0.3       parallelly_1.32.0 anytime_0.3.9    
+    ## [37] rstatix_0.7.0     xml2_1.3.3        tools_4.2.0       hms_1.1.1        
+    ## [41] lifecycle_1.0.1   munsell_0.5.0     reprex_2.0.1      compiler_4.2.0   
+    ## [45] rlang_1.0.2       grid_4.2.0        rstudioapi_0.13   rmarkdown_2.14   
+    ## [49] gtable_0.3.0      codetools_0.2-18  abind_1.4-5       DBI_1.1.2        
+    ## [53] R6_2.5.1          knitr_1.39        fastmap_1.1.0     utf8_1.2.2       
+    ## [57] stringi_1.7.6     parallel_4.2.0    Rcpp_1.0.8.3      vctrs_0.4.1      
+    ## [61] dbplyr_2.2.0      tidyselect_1.1.2  xfun_0.31

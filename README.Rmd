@@ -1,0 +1,26 @@
+---
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(lubridate)
+library(ggpubr)
+library(cowplot)
+library(broom)
+library(tsibble)
+library(arrangements)
+library(future.apply)
+library(dpseg)
+library(ggridges)
+plan(multisession)
+
+set.seed(123456)
+```
+
+# Information about packages and versions
+
+```{r}
+sessionInfo()
+```
