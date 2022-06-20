@@ -11,9 +11,15 @@ library(dpseg)
 library(ggridges)
 plan(multisession)
 
-set.seed(123456)                         shape = c(16, NA, NA, NA)))) + 
-  theme(legend.position = "bottom") +
+set.seed(123456)
 
+# colours
+my_blue <- RColorBrewer::brewer.pal(9,"Blues")[7]
+my_grey <- "grey80"
+grey_palette <- RColorBrewer::brewer.pal(9,"Greys")[3:8]
+blue_palette <- RColorBrewer::brewer.pal(9,"Blues")[3:8]
+
+#get code
 sapply(list.files("code", full.names = T), source)
 
 # 0. read data
@@ -58,12 +64,6 @@ transformation()
 run_low_sample_size_test()
 
 ### PLOTS
-16:00
-# colours
-my_blue <- RColorBrewer::brewer.pal(9,"Blues")[7]
-my_grey <- "grey80"
-grey_palette <- RColorBrewer::brewer.pal(9,"Greys")[3:8]
-blue_palette <- RColorBrewer::brewer.pal(9,"Blues")[3:8]
 
 # FIG.2
 plot_data(blue = my_blue)
@@ -75,11 +75,11 @@ ggsave("plots/fig3_bias_plot.png", width = 21, height = 13, unit = "cm", dpi = 3
 
 # FIG.4
 plot_gof_vs_temporal_stability(my_blue, my_grey)
-ggsave("plots/fig4_gof_vs_stability.png", dpi = 300, width = 15, height = 8, unit = "cm")
+ggsave("plots/fig4_gof_vs_stability.png", dpi = 300, width = 15, height = 8, unit = "cm", bg = "white")
 
 # FIG.5
 plot_gof_low_sample(blue_palette, grey_palette)
-ggsave("plots/fig5_gof_avg_ecdf.png", dpi = 300, width = 15, height = 9, unit = "cm")
+ggsave("plots/fig5_gof_avg_ecdf.png", dpi = 300, width = 15, height = 9, unit = "cm", bg = "white")
 
 # FIG.6 + VALUES FOR TAB.1
 plot_ts_results()
@@ -90,7 +90,24 @@ ggsave("plots/fig6_ts_swc.png", dpi = 300, width = 18, height = 10, unit = "cm",
 
 # APPENDIX B
 cdf_matching_poly_vs_plr()
-ggsave("plots/appendixb_cdf_poly_vs_plr.png", dpi = 300, width = 15, height = 10, unit = "cm")
+ggsave("plots/appendixB_cdf_poly_vs_plr.png", dpi = 300, width = 15, height = 10, unit = "cm", bg = "white")
 
 # APPENDIX C 
 run_transformation_test_training()
+
+# not shown:
+# comparison of 10cm average vs 50cm original + upscaled average
+read_csv("data/measurements_transformed.csv") %>%
+  dplyr::filter(Layer == "10cm" | Layer == "50cm") %>%
+  group_by(Date, Layer) %>%
+  summarise(mean_arithmetic = mean(mean_arithmetic),
+            mean_cdf = mean(SWC_cdf)) %>%
+  pivot_longer(-c(Date, Layer)) %>%
+  pivot_wider(names_from = c(Layer, name)) %>%
+  drop_na() %>%
+  ungroup() %>%
+  summarise(R2_before = caret::R2(`10cm_mean_arithmetic`,`50cm_mean_arithmetic`),
+            RMSE_before = caret::RMSE(`10cm_mean_arithmetic`,`50cm_mean_arithmetic`),
+            R2_after = caret::R2(`10cm_mean_arithmetic`,`50cm_mean_cdf`),
+            RMSE_after = caret::RMSE(`10cm_mean_arithmetic`,`50cm_mean_cdf`))
+
